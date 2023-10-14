@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{03287D34-80CF-4755-BBE5-BB63B3D7CA5E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ITCoffee</RootNamespace>
+    <AssemblyName>ITCoffee</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ITCoffee.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAdmin.Designer.cs">
+      <DependentUpon>fAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSell.Designer.cs">
+      <DependentUpon>fSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\DAO\AccountDAO.cs" />
+    <Compile Include="src\DAO\BillDAO.cs" />
+    <Compile Include="src\DAO\BillInforDAO.cs" />
+    <Compile Include="src\DAO\FoodCategoryDAO.cs" />
+    <Compile Include="src\DAO\FoodDAO.cs" />
+    <Compile Include="src\DAO\MenuFoodDAO.cs" />
+    <Compile Include="src\DAO\StaffDAO.cs" />
+    <Compile Include="src\DAO\TableDAO.cs" />
+    <Compile Include="src\DAO\DataProvider.cs" />
+    <Compile Include="src\DTO\Bill.cs" />
+    <Compile Include="src\DTO\BillHistory.cs" />
+    <Compile Include="src\DTO\BillInfor.cs" />
+    <Compile Include="src\DTO\BillReport.cs" />
+    <Compile Include="src\DTO\Food.cs" />
+    <Compile Include="src\DTO\FoodCategory.cs" />
+    <Compile Include="src\DTO\MenuFood.cs" />
+    <Compile Include="src\DTO\Staff.cs" />
+    <Compile Include="src\DTO\Table.cs" />
+    <Compile Include="src\DTO\TableArea.cs" />
+    <Compile Include="src\forms_children_admin\fFoodGroupNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_admin\fFoodGroupNew.Designer.cs">
+      <DependentUpon>fFoodGroupNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\forms_children_admin\fFoodGroupUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_admin\fFoodGroupUpdate.Designer.cs">
+      <DependentUpon>fFoodGroupUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\forms_children_admin\fFoodNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_admin\fFoodNew.Designer.cs">
+      <DependentUpon>fFoodNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\forms_children_admin\fFoodUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_admin\fFoodUpdate.Designer.cs">
+      <DependentUpon>fFoodUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\forms_children_admin\fStaffAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_admin\fStaffAdd.Designer.cs">
+      <DependentUpon>fStaffAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\forms_children_admin\fTableAreaNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_admin\fTableAreaNew.Designer.cs">
+      <DependentUpon>fTableAreaNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\forms_children_admin\fTableAreaUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_admin\fTableAreaUpdate.Designer.cs">
+      <DependentUpon>fTableAreaUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\forms_children_admin\fTableNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_admin\fTableNew.Designer.cs">
+      <DependentUpon>fTableNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\forms_children_admin\fTableUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_admin\fTableUpdate.Designer.cs">
+      <DependentUpon>fTableUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\forms_children_admin\fStaffUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_admin\fStaffUpdate.Designer.cs">
+      <DependentUpon>fStaffUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fBillReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fBillReport.Designer.cs">
+      <DependentUpon>fBillReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fBillHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fBillHistory.Designer.cs">
+      <DependentUpon>fBillHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fChangePassword.Designer.cs">
+      <DependentUpon>fChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fInputDiaLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fInputDiaLog.Designer.cs">
+      <DependentUpon>fInputDiaLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fOrder.Designer.cs">
+      <DependentUpon>fOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fPhongban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fPhongban.Designer.cs">
+      <DependentUpon>fPhongban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fQuydinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fQuydinh.Designer.cs">
+      <DependentUpon>fQuydinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fSetting.Designer.cs">
+      <DependentUpon>fSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fUserManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fUserManual.Designer.cs">
+      <DependentUpon>fUserManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fxuathoadon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\forms_children_sell\fxuathoadon.Designer.cs">
+      <DependentUpon>fxuathoadon.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fAdmin.resx">
+      <DependentUpon>fAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSell.resx">
+      <DependentUpon>fSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="src\forms_children_admin\fFoodGroupNew.resx">
+      <DependentUpon>fFoodGroupNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\forms_children_admin\fFoodGroupUpdate.resx">
+      <DependentUpon>fFoodGroupUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\forms_children_admin\fFoodNew.resx">
+      <DependentUpon>fFoodNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\forms_children_admin\fFoodUpdate.resx">
+      <DependentUpon>fFoodUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\forms_children_admin\fStaffAdd.resx">
+      <DependentUpon>fStaffAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\forms_children_admin\fStaffUpdate.resx">
+      <DependentUpon>fStaffUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\forms_children_admin\fTableAreaNew.resx">
+      <DependentUpon>fTableAreaNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\forms_children_admin\fTableAreaUpdate.resx">
+      <DependentUpon>fTableAreaUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\forms_children_admin\fTableNew.resx">
+      <DependentUpon>fTableNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\forms_children_admin\fTableUpdate.resx">
+      <DependentUpon>fTableUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\forms_children_sell\fBillHistory.resx">
+      <DependentUpon>fBillHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\forms_children_sell\fBillReport.resx">
+      <DependentUpon>fBillReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\forms_children_sell\fChangePassword.resx">
+      <DependentUpon>fChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\forms_children_sell\fInputDiaLog.resx">
+      <DependentUpon>fInputDiaLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\forms_children_sell\fOrder.resx">
+      <DependentUpon>fOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\forms_children_sell\fPhongban.resx">
+      <DependentUpon>fPhongban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\forms_children_sell\fQuydinh.resx">
+      <DependentUpon>fQuydinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\forms_children_sell\fSetting.resx">
+      <DependentUpon>fSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\forms_children_sell\fUserManual.resx">
+      <DependentUpon>fUserManual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\forms_children_sell\fxuathoadon.resx">
+      <DependentUpon>fxuathoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\assets\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OIG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash-art-espresso-in-glass-cup-surrealistic-epic-artstation-splash-style-of-colorful-paint-s-532733541.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bray1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

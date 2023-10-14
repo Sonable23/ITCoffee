@@ -94,6 +94,7 @@ namespace ITCoffee.src.forms_children
                 this._total_Count_Menu += item.count;
             }
             //load data btn
+            // Nguyên
             //đơn vị tiền tệ
             CultureInfo culture = new CultureInfo("vi-VN");
             btn_Total_Count.Text = $"Số lượng: {this._total_Count_Menu.ToString()}";

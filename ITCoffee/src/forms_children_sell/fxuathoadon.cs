@@ -49,6 +49,7 @@ namespace ITCoffee.src.forms_children_sell
             }
         }
 //quá là hợp lí, đang test github
+//Nguyên đang test Github
         private void fxuathoadon_Load(object sender, EventArgs e)
         {
             txtTenBan.Text = TenBan;
